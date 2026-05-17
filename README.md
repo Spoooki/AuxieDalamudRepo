@@ -1,35 +1,24 @@
-# Auxie Dalamud Plugin Repo
+# Aux Dalamud Repo
 
-This repository hosts a custom Dalamud plugin feed JSON.
+Custom Dalamud feed for Aux plugins.
 
-## Files
+## Feed URL
 
-- `repo.json`: feed consumed by Dalamud custom repositories.
+Use this in XIVLauncher -> Dalamud Settings -> Experimental -> Custom Plugin Repositories:
 
-## How to publish
+`https://raw.githubusercontent.com/Spoooki/AuxDalamudRepo/main/repo.json`
 
-1. Create a GitHub repository (for example `Spoooki/AuxieDalamudRepo`).
-2. Push this folder to that repository.
-3. Make sure `repo.json` is reachable over HTTPS:
-   - Raw URL example:
-     - `https://raw.githubusercontent.com/Spoooki/AuxieDalamudRepo/main/repo.json`
-4. In XIVLauncher -> Dalamud settings -> Experimental tab, add that URL as a custom plugin repository.
+## Included Plugins
 
-## Updating plugin releases
+- **AuxEmotion** - auto-react to chat triggers with emotes, expressions, and macro slot actions.
+- **AuxMarketboard** - import crafting/shopping lists and estimate gil cost from live Universalis market data.
 
-When you publish a new `AuxMarketboard` or `AuxEmotion` release:
+## Repository Contents
 
-1. Upload a zip artifact named `AuxMarketboard.zip` or `AuxEmotion.zip` to GitHub Releases.
-2. Update `repo.json` fields:
-   - `AssemblyVersion`
-   - `LastUpdate` (unix timestamp seconds)
-   - `DownloadLinkInstall`, `DownloadLinkUpdate`, `DownloadLinkTesting` (if URL changes)
-3. Commit and push `repo.json`.
+- `repo.json` - feed manifest consumed by Dalamud.
 
-## Expected release zip content
+## Release Update Checklist
 
-`AuxMarketboard.zip` and `AuxEmotion.zip` should include:
-
-- `<PluginName>.dll`
-- `<PluginName>.json`
-- any additional runtime files required by the plugin
+1. Publish `AuxEmotion.zip` and/or `AuxMarketboard.zip` to the respective plugin GitHub Releases.
+2. Update each plugin entry in `repo.json` (`AssemblyVersion`, `LastUpdate`, and download links if changed).
+3. Commit and push to `main`.
