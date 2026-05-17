@@ -6,7 +6,7 @@
     "AssemblyVersion": "0.1.0.0",
     "TestingAssemblyVersion": null,
     "RepoUrl": "https://github.com/auxee/AuxMarketboard",
-    "IconUrl": "https://raw.githubusercontent.com/auxee/AuxMarketboard/main/plugin_icon.png",
+    "IconUrl": "https://raw.githubusercontent.com/auxee/AuxMarketboard/main/AuxMarketboard/plugin_icon.png",
     "ApplicableVersion": "any",
     "DalamudApiLevel": 15,
     "Punchline": "Price imported and custom item lists from Universalis",
